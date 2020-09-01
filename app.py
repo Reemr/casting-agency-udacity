@@ -11,6 +11,10 @@ def create_app(test_config=None):
   setup_db(app)
   CORS(app)
 
+  @app.route('/')
+  def home_page():
+    return "Use /movies and /actors endpoints with the right permission headers"
+
   '''
   GET movies list
   '''
